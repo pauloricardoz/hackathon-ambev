@@ -1,12 +1,14 @@
 import React, { useContext, useState } from 'react';
 import myContext from '../Context';
+import  '../CSS/pagamento.css'
 
 function Pagamento() {
   const { date, CEP, city, cart } = useContext(myContext);
   const [metod, setMetod] = useState(null);
+
   return (
     <div>
-      <form>
+      <form className="flex-me">
         <label htmlFor="first">Primeiro nome:</label>
         <input name="first" />
 
@@ -14,10 +16,10 @@ function Pagamento() {
         <input name="last" />
 
         <label htmlFor="street">Lougradouro:</label>
-        <input name="street" defaultValue={city.street} />
+        <input name="street" defaultValue={!city?'':city.street} />
 
         <label htmlFor="neighborhood">Bairro:</label>
-        <input name="neighborhood" defaultValue={city.neighborhood} />
+        <input name="neighborhood" defaultValue={!city?'':city.neighborhood} />
 
         <label htmlFor="number">Numero:</label>
         <input type="number" name="number" />
@@ -26,10 +28,10 @@ function Pagamento() {
         <input name="complement" />
 
         <label htmlFor="city">Cidade:</label>
-        <input name="city" defaultValue={city.city} />
+        <input name="city" defaultValue={!city?'':city.city} />
 
         <label htmlFor="state">Estado: </label>
-        <input name="state" defaultValue={city.state} />
+        <input name="state" defaultValue={!city?'':city.state} />
       </form>
       <form>
         <label>Forma de pagamento:</label>

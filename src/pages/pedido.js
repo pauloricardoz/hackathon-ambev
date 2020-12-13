@@ -3,8 +3,8 @@ import Produto from '../components/Produto';
 import TotalCart from '../components/totalCart';
 import myContext from '../Context';
 import '../CSS/pedido.css';
-/* import mockProdutos from '../components/db' */
-const mockProdutos = [
+import mockProdutos from '../components/db'
+/* const mockProdutos = [
   {
     titulo: 'brahma-chopp',
     preco: 2.99,
@@ -41,7 +41,7 @@ const mockProdutos = [
     image: `https://courier-images-prod.imgix.net/produc_variant/00008511_81af619a-8024-42d8-b009-7127afc6baa8.jpg?auto=compress,format&fit=max&w=undefined&h=undefined&dpr=2`,
     id: 4,
   },
-];
+]; */
 
 const Pedido = (props) => {
   const { date, CEP, city, cart } = useContext(myContext);

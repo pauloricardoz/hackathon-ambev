@@ -50,7 +50,7 @@ const Pedido = (props) => {
       <h1>Escolha os produtos e as quantidades</h1>
       <div className="lista">
         {mockProdutos.map((e) => (
-          <Produto {...e} key={e.id} />
+          <Produto image={e.image} titulo={e.titulo} preco={e.preco} key={e.id} id={e.id} />
         ))}
       </div>
       <aside></aside>

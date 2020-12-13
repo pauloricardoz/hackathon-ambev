@@ -22,7 +22,7 @@ const GetCEP = () => {
         onClick={() =>
           cep(CEP)
             .then((e) => {
-              console.log(e)
+              console.log(e);
               setCity(e);
             })
             .catch((e) => {

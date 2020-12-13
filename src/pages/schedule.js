@@ -17,7 +17,7 @@ const Schedule = (props) => {
       <button
         onClick={() => {
           const [year, month, day] = [date.getFullYear(), date.getMonth(), date.getDate()];
-          console.log(date.getTime().toDay());
+          console.log(date.getTime());
           if (date.getTime) {
             console.log(`data Ruim`);
           }

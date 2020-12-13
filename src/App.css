@@ -25,6 +25,7 @@ footer {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
+  font-weight: bold;
 }
 
 footer a:link, a:visited {

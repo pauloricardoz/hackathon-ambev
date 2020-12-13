@@ -6,7 +6,7 @@ export function Provider({ children }) {
   const [date, setDate] = useState(new Date());
   const [city, setCity] = useState(null);
   const [CEP, setCEP] = useState(null);
-  const [cart, setCart] = useState({ 0: { qty: 10 } });
+  const [cart, setCart] = useState({});
   const value = {
     date,
     setDate,

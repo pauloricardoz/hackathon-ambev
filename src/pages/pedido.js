@@ -43,11 +43,16 @@ const mockProdutos = [
 ];
 
 const Pedido = (props) => {
-  const { date, CEP, city } = useContext(myContext);
-
+  const { date, CEP, city, cart } = useContext(myContext);
+  console.log(Object.entries(cart));
   return (
     <div>
       <h1>Escolha os produtos e as quantidades</h1>
+      <span>
+        {Object.entries(cart)
+          .reduce((a, c) => a + c[1].qty * c[1].price, 0)
+          .toFixed(2)}
+      </span>
       <div className="lista" data-cy="list">
         {mockProdutos.map((e) => (
           <Produto image={e.image} titulo={e.titulo} preco={e.preco} key={e.id} id={e.id} />

@@ -16,7 +16,7 @@ const Main = () => {
           Uma preocupação a menos para o seu evento!
         </p>
         <p>
-          Clique em COMEÇAR e fassa agente seu pedido
+          Clique em COMEÇAR e agende seu pedido
         </p>
         <button type="button">
           <Link to={`/agendamento`}>

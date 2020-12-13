@@ -1,44 +1,73 @@
 import React, { useContext, useState } from 'react';
+import FormaPagamento from '../components/formasPagamento';
 import myContext from '../Context';
+import '../CSS/pagamento.css';
 
 function Pagamento() {
   const { date, CEP, city, cart } = useContext(myContext);
   const [metod, setMetod] = useState(null);
+  const [persona, setPersona] = useState({});
+  const [payment, setPayment] = useState('');
+  const handlePersona = ({ target: { value, name } }) =>
+    setPersona((p) => ({ ...p, [name]: value }));
   return (
-    <div>
-      <form>
+    <div className="flex-column">
+      <form className="flex-me">
         <label htmlFor="first">Primeiro nome:</label>
-        <input name="first" />
+        <input name="first" onChange={handlePersona} required />
 
         <label htmlFor="last">Último nome:</label>
-        <input name="last" />
+        <input name="last" onChange={handlePersona} required />
 
         <label htmlFor="street">Lougradouro:</label>
-        <input name="street" defaultValue={city.street} />
+        <input
+          name="street"
+          defaultValue={!city ? '' : city.street}
+          onChange={handlePersona}
+          required
+        />
 
         <label htmlFor="neighborhood">Bairro:</label>
-        <input name="neighborhood" defaultValue={city.neighborhood} />
+        <input
+          name="neighborhood"
+          defaultValue={!city ? '' : city.neighborhood}
+          onChange={handlePersona}
+        />
 
         <label htmlFor="number">Numero:</label>
-        <input type="number" name="number" />
+        <input type="number" name="number" onChange={handlePersona} required />
 
         <label htmlFor="complement">Complemento:</label>
-        <input name="complement" />
+        <input name="complement" onChange={handlePersona} />
 
         <label htmlFor="city">Cidade:</label>
-        <input name="city" defaultValue={city.city} />
+        <input
+          name="city"
+          defaultValue={!city ? '' : city.city}
+          onChange={handlePersona}
+          required
+        />
 
         <label htmlFor="state">Estado: </label>
-        <input name="state" defaultValue={city.state} />
+        <input
+          name="state"
+          defaultValue={!city ? '' : city.state}
+          onChange={handlePersona}
+          required
+        />
       </form>
-      <form>
+      <form className="flex-me">
         <label>Forma de pagamento:</label>
         <select onClick={(e) => setMetod(e.target.value)}>
+          <option value="" disabled>
+            Selecione um opcao
+          </option>
           <option value="credit">Cartão de crédito</option>
           <option value="boleto">Boleto</option>
           <option value="transfer">Transferência</option>
           <option value="pix">Pix</option>
         </select>
+        <FormaPagamento forma={metod} />
       </form>
     </div>
   );

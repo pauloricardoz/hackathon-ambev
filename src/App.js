@@ -5,12 +5,14 @@ import './App.css';
 import Pedido from './pages/pedido';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Pagamento from './pages/pagamento';
 
 function App() {
   return (
     <div>
       <Header />
       <Switch>
+        <Route path="/Pagamento" component={Pagamento} />
         <Route path="/pedido" component={Pedido} />
         <Route path="/agendamento" component={Schedule} />
         <Route path="/" component={Main} />

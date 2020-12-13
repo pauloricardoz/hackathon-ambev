@@ -5,8 +5,7 @@ import '../CSS/produto.css';
 function Produto(props) {
   const { image, titulo, preco, id } = props;
   const { cart, setCart } = useContext(myContext);
-  console.log(cart, id);
-  console.log(cart[id]);
+
   return (
     <div className="produto">
       <img src={image} className="image" />
@@ -18,7 +17,7 @@ function Produto(props) {
             setCart((cartInst) => {
               return {
                 ...cartInst,
-                [id]: { qty: cartInst[id].qty > 0 ? cartInst[id].qty - 1 : 0 },
+                [id]: { ...cartInst[id], qty: cartInst[id].qty > 0 ? cartInst[id].qty - 1 : 0 },
               };
             });
           }
@@ -31,11 +30,11 @@ function Produto(props) {
         onClick={() => {
           if (cart[id]) {
             setCart((cartInst) => {
-              return { ...cartInst, [id]: { qty: cartInst[id].qty + 1 } };
+              return { ...cartInst, [id]: { ...cartInst[id], qty: cartInst[id].qty + 1 } };
             });
           } else {
             setCart((cartInst) => {
-              return { ...cartInst, [id]: { qty: 1 } };
+              return { ...cartInst, [id]: { ...cartInst[id], qty: 1, price: preco } };
             });
           }
         }}

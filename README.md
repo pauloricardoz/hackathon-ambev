@@ -1,4 +1,4 @@
-# Time 19 - Proost
+# Time 19 - Prost
 
 Projeto criado para ajudar os empresários do segmento de eventos a conquistarem melhires condições de preço, logística e relacionamento com a AMBEV
 

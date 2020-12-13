@@ -1,18 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import fotoBanner from '../images/fotoBanner.png';
+import '../CSS/main.css';
+import image from '../images/image.png';
 
 const Main = () => {
   return (
-    <div>
-      <div>
-        <div>
-          <img alt="Banner Principal" src={fotoBanner} />
-        </div>
-        <h1>
+    <div className='main'>
+      <div className='content'>
+        <h1 className='title'>
           Seu abastecimento de bebidas nunca foi tão simples, fácil e intuitivo
         </h1>
-        <p> 
+        <p className='description'>
           Uma preocupação a menos para o seu evento!
         </p>
         <p>
@@ -24,6 +22,10 @@ const Main = () => {
           </Link>
         </button>
       </div>
+      <div>
+        <img alt="Imagem" src={image} />
+      </div>
+
     </div>
   )
 };

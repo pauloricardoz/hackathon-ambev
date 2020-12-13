@@ -1,6 +1,27 @@
-header, footer {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+header,
+footer {
   background-color: black;
-  color: white;
+  color: #f88622;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  text-shadow: #282c34;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 15%;
+}
+
+.logo {
+  width: 25%;
 }
 
 header ul li {
@@ -10,45 +31,13 @@ header ul li {
 }
 
 header a:hover {
-  color: chartreuse;
+  color: black;
 }
 
-header a, a:hover, a:focus, a:active {
+header a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   color: inherit;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

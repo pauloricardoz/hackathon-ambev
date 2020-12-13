@@ -54,6 +54,14 @@ const DetalhesData = () => {
       state: 'MG',
       street: '',
     },
+    {
+      cep: '30315500',
+      city: 'Belo Horizonte',
+      neighborhood: 'Sion',
+      service: 'viacep',
+      state: 'MG',
+      street: 'Rua Califórnia',
+    },
   ]);
 
   return (

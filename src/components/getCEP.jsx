@@ -7,12 +7,11 @@ const GetCEP = () => {
   const { CEP, setCEP, city, setCity } = useContext(myContext);
   const [message, setMessage] = useState(null);
 
-  console.log(/\d{5}-\d{3}/.test(CEP));
   return (
     <div>
       <input
         type="text"
-        class="form-control cep-mask"
+        className="form-control cep-mask"
         placeholder="Ex.: 00000-000"
         onChange={(e) => {
           setCEP(e.target.value);
@@ -23,11 +22,10 @@ const GetCEP = () => {
         onClick={() =>
           cep(CEP)
             .then((e) => {
-              console.log(e);
+              console.log(e)
               setCity(e);
             })
             .catch((e) => {
-              console.log(e);
               setMessage(`${e.message} Tente novamente um CEP valido`);
             })
         }

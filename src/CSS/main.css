@@ -12,3 +12,17 @@
   color: white;
   padding: 5%;
 }
+
+.imagem {
+    padding: 2%;
+}
+
+.button {
+    border-radius: 0%;
+    border: 0px;
+    padding: 5%;
+}
+
+.linkbtn {
+    text-decoration: none;
+} 

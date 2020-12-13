@@ -25,7 +25,7 @@ function Pagamento() {
         <label htmlFor="city">Cidade:</label>
         <input name="city" defaultValue={city.city} />
 
-        <label htmlFor="state">Estado:</label>
+        <label htmlFor="state">Estado: </label>
         <input name="state" defaultValue={city.state} />
       </form>
       <form>

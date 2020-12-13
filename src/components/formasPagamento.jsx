@@ -6,42 +6,40 @@ function FormaPagamento(props) {
     case 'credit':
       return (
         <div className="flex-me">
-          <label htmlFor="cred-name">Nome impresso no cart'ao: </label>
+          <label htmlFor="cred-name">Nome impresso no cartão: </label>
           <input type="text" name="cred-name" />
-          <div>
-            <label htmlFor="cred-number">Numero do cart'ao: </label>
-            {/* <input type="text" name="cred-number" /> */}
-            <input
-              id="ccn"
-              type="text"
-              maxlength="19"
-              placeholder="xxxx xxxx xxxx xxxx"
-              onChange={(e) => {
-                let num = e.target.value;
-                const last = num[num.length - 1];
-                if (isNaN(Number(last) || last !== ' ')) {
-                  e.target.value = num.slice(0, num.length - 1);
-                }
-              }}
-              required
-            />
+          <label htmlFor="cred-number">Número do cartão: </label>
+          {/* <input type="text" name="cred-number" /> */}
+          <input
+            id="ccn"
+            type="text"
+            maxlength="19"
+            placeholder="xxxx xxxx xxxx xxxx"
+            onChange={(e) => {
+              let num = e.target.value;
+              const last = num[num.length - 1];
+              if (isNaN(Number(last) || last !== ' ')) {
+                e.target.value = num.slice(0, num.length - 1);
+              }
+            }}
+            required
+          />
 
-            <label htmlFor="cvc">CVC: </label>
-            <input
-              type="text"
-              name="cvc"
-              maxLength="3"
-              minLength="3"
-              onChange={(e) => {
-                let num = e.target.value;
-                const last = num[num.length - 1];
-                if (isNaN(Number(last))) {
-                  e.target.value = num.slice(0, num.length - 1);
-                }
-              }}
-              required
-            />
-          </div>
+          <label htmlFor="cvc">CVC: </label>
+          <input
+            type="text"
+            name="cvc"
+            maxLength="3"
+            minLength="3"
+            onChange={(e) => {
+              let num = e.target.value;
+              const last = num[num.length - 1];
+              if (isNaN(Number(last))) {
+                e.target.value = num.slice(0, num.length - 1);
+              }
+            }}
+            required
+          />
 
           <label htmlFor="cred-date">Data de validade: </label>
           <input
@@ -57,6 +55,7 @@ function FormaPagamento(props) {
           />
         </div>
       );
+
     case 'credit':
       return;
     case 'boleto':
@@ -67,7 +66,7 @@ function FormaPagamento(props) {
       return;
 
     default:
-      return <div>test</div>;
+      return null;
   }
 }
 

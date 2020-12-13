@@ -4,24 +4,15 @@ import Schedule from './pages/schedule';
 import './App.css';
 import Pedido from './pages/pedido';
 import Footer from './components/Footer';
+import Header from './components/Header';
+import Pagamento from './pages/pagamento';
+
 function App() {
   return (
     <div>
-      <header>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/agendamento">Agendamento</Link>
-          </li>
-          <li>
-            <Link to="/pedido">Pedido</Link>
-          </li>
-        </ul>
-      </header>
-
+      <Header />
       <Switch>
+        <Route path="/Pagamento" component={Pagamento} />
         <Route path="/pedido" component={Pedido} />
         <Route path="/agendamento" component={Schedule} />
         <Route path="/" component={Main} />

@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Produto from '../components/Produto';
+import TotalCart from '../components/totalCart';
 import myContext from '../Context';
 import '../CSS/pedido.css';
-
+/* import mockProdutos from '../components/db' */
 const mockProdutos = [
   {
     titulo: 'brahma-chopp',
@@ -48,11 +49,8 @@ const Pedido = (props) => {
   return (
     <div>
       <h1>Escolha os produtos e as quantidades</h1>
-      <span>
-        {Object.entries(cart)
-          .reduce((a, c) => a + c[1].qty * c[1].price, 0)
-          .toFixed(2)}
-      </span>
+      <TotalCart />
+      <button onClick={() => props.history.push('/pagamento')}>Finalizar compra</button>
       <div className="lista" data-cy="list">
         {mockProdutos.map((e) => (
           <Produto image={e.image} titulo={e.titulo} preco={e.preco} key={e.id} id={e.id} />

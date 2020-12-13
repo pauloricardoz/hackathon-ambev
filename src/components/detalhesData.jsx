@@ -65,10 +65,11 @@ const DetalhesData = () => {
   ]);
 
   return (
-    <div>
-      <h1>Detalhes da data</h1>
+    <div className="cidade">
+      <h2>Cidade: </h2>
+
       {city ? (
-        cidadePedidos.filter((e) => e.city === city.city).map((e) => <p>{e.city}</p>)
+        cidadePedidos.filter((e) => e.city === city.city).map((e) => <h2>{e.city}</h2>)
       ) : (
         <p>Sem pedidos para essa cidade ainda</p>
       )}

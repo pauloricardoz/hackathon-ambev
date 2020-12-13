@@ -8,7 +8,7 @@ const GetCEP = () => {
   const [message, setMessage] = useState(null);
 
   return (
-    <div>
+    <div className="search-cep">
       <input
         type="text"
         className="form-control cep-mask"
@@ -19,6 +19,7 @@ const GetCEP = () => {
       />
       <button
         disabled={!/^\d{5}[-]?\d{3}$/.test(CEP)}
+        className="button"
         onClick={() =>
           cep(CEP)
             .then((e) => {

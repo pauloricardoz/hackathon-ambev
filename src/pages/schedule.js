@@ -12,15 +12,19 @@ const Schedule = (props) => {
   console.log(date);
   return (
     <div className="calendar" data-cy="calendly">
-      {city ? (
-        <label>
-          Alterar CEP?<button onClick={() => setCity(null)}>Sim</button>
-        </label>
-      ) : null}
       {!city ? <GetCEP /> : <DetalhesData />}
+      {city ? (
+        <div>
+          <h2 className="alterar-cep">
+            Alterar CEP?
+          </h2>
+          <button className="button alterar-cep" onClick={() => setCity(null)}>Sim</button>
+        </div>
+      ) : null}
       <MyCalendar />
 
       <button
+        className="button"
         onClick={() => {
           const [year, month, day] = [date.getFullYear(), date.getMonth(), date.getDate()];
           console.log(date.getTime());

@@ -25,6 +25,7 @@ footer {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
+  font-weight: bold;
 }
 
 footer a:link, a:visited {
@@ -36,10 +37,10 @@ footer a:link, a:visited {
   width: 25%;
 }
 
-.mambers {
+/* .mambers {
   display: flex;
   justify-content: space-around;
-}
+} */
 
 header ul li {
   list-style-type: none;

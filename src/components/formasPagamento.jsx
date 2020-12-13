@@ -13,10 +13,7 @@ function FormaPagamento(props) {
             {/* <input type="text" name="cred-number" /> */}
             <input
               id="ccn"
-              type="tel"
-              inputmode="numeric"
-              pattern="[0-9\s]{13,19}"
-              autocomplete="cc-number"
+              type="text"
               maxlength="19"
               placeholder="xxxx xxxx xxxx xxxx"
               onChange={(e) => {

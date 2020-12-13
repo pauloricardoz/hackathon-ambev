@@ -9,16 +9,24 @@ import DetalhesData from '../components/detalhesData';
 
 const Schedule = (props) => {
   const { date, CEP, city } = useContext(myContext);
-
-  console.log(/\d{5}-\d{3}/.test(CEP));
+  console.log(date);
   return (
-    <div className="calendar">
+    <div className="calendar" data-cy="calendly">
       {!city ? <GetCEP /> : <DetalhesData />}
-      <br />
-      <br />
-      <br />
       <MyCalendar />
-      <button onClick={() => props.history.push('/pedido')}>Adicionar pedido</button>
+
+      <button
+        onClick={() => {
+          const [year, month, day] = [date.getFullYear(), date.getMonth(), date.getDate()];
+          console.log(date.getTime());
+          if (date.getTime) {
+            console.log(`data Ruim`);
+          }
+          props.history.push('/pedido');
+        }}
+      >
+        Adicionar pedido
+      </button>
     </div>
   );
 };

@@ -8,17 +8,27 @@ import GetCEP from '../components/getCEP';
 import DetalhesData from '../components/detalhesData';
 
 const Schedule = (props) => {
-  const { date, CEP, city } = useContext(myContext);
-
-  console.log(/\d{5}-\d{3}/.test(CEP));
+  const { date, CEP, city, setCity } = useContext(myContext);
+  console.log(date);
   return (
-    <div className="calendar">
+    <div className="calendar" data-cy="calendly">
+      {city ? (
+        <label>
+          Alterar CEP?<button onClick={() => setCity(null)}>Sim</button>
+        </label>
+      ) : null}
       {!city ? <GetCEP /> : <DetalhesData />}
-      <br />
-      <br />
-      <br />
       <MyCalendar />
-      <button onClick={() => props.history.push('/pedido')}>Adicionar pedido</button>
+
+      <button
+        onClick={() => {
+          const [year, month, day] = [date.getFullYear(), date.getMonth(), date.getDate()];
+          console.log(date.getTime());
+          props.history.push('/pedido');
+        }}
+      >
+        Adicionar pedido
+      </button>
     </div>
   );
 };

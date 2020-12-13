@@ -10,7 +10,7 @@ function Produto(props) {
     <div className="produto">
       <img src={image} className="image" />
       <p>{titulo}</p>
-      <p>{preco}</p>
+      <p>R$ {preco}</p>
       <button
         onClick={() => {
           if (cart[id]) {
@@ -25,7 +25,7 @@ function Produto(props) {
       >
         -
       </button>
-      {cart[id] ? cart[id].qty : 0}
+      {' '} {cart[id] ? cart[id].qty : 0} {' '}
       <button
         onClick={() => {
           if (cart[id]) {

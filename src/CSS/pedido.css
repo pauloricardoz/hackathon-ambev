@@ -1,3 +1,25 @@
+.title {
+  text-align: center;
+  margin: 5%;
+  color: dimgray;
+}
+
+.carrinho {
+  display: flex;
+  justify-content: space-evenly;
+  color: dimgray;
+  margin-bottom: 5%;
+}
+
+.btn-finCompra {
+  border-radius: 0%;
+  border: 0px;
+  padding: 5%;
+  background-color: #F88622;
+  color: white;
+  font-weight: bold;
+}
+
 .lista {
   display: flex;
   flex-wrap: wrap;

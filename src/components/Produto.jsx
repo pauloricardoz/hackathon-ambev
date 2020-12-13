@@ -9,7 +9,7 @@ function Produto(props) {
   return (
     <div className="produto">
       <img src={image} className="image" />
-      <p>{titulo}</p>
+      <p>{titulo} - Caixa 12 unid</p>
       <p>{preco}</p>
       <button
         onClick={() => {

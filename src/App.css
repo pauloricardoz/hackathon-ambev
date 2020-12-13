@@ -9,6 +9,7 @@ footer {
   text-shadow: #282c34;
   margin-left: 5%;
   margin-right: 5%;
+  text-decoration: none;
 }
 
 header {
@@ -20,8 +21,24 @@ header {
   height: 15%;
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+footer a:link, a:visited {
+  text-decoration: none;
+  color: #f88622;
+}
+
 .logo {
   width: 25%;
+}
+
+.mambers {
+  display: flex;
+  justify-content: space-around;
 }
 
 header ul li {
@@ -31,6 +48,10 @@ header ul li {
 }
 
 header a:hover {
+  color: black;
+}
+
+footer a:hover {
   color: black;
 }
 

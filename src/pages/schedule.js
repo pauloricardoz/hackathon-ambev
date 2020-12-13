@@ -8,10 +8,15 @@ import GetCEP from '../components/getCEP';
 import DetalhesData from '../components/detalhesData';
 
 const Schedule = (props) => {
-  const { date, CEP, city } = useContext(myContext);
+  const { date, CEP, city, setCity } = useContext(myContext);
   console.log(date);
   return (
     <div className="calendar" data-cy="calendly">
+      {city ? (
+        <label>
+          Alterar CEP?<button onClick={() => setCity(null)}>Sim</button>
+        </label>
+      ) : null}
       {!city ? <GetCEP /> : <DetalhesData />}
       <MyCalendar />
 
@@ -19,9 +24,6 @@ const Schedule = (props) => {
         onClick={() => {
           const [year, month, day] = [date.getFullYear(), date.getMonth(), date.getDate()];
           console.log(date.getTime());
-          if (date.getTime) {
-            console.log(`data Ruim`);
-          }
           props.history.push('/pedido');
         }}
       >

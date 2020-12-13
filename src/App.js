@@ -4,6 +4,7 @@ import Schedule from './pages/schedule';
 import './App.css';
 import Pedido from './pages/pedido';
 import Footer from './components/Footer';
+import Pagamento from './pages/pagamento';
 function App() {
   return (
     <div>
@@ -22,6 +23,7 @@ function App() {
       </header>
 
       <Switch>
+        <Route path="/Pagamento" component={Pagamento} />
         <Route path="/pedido" component={Pedido} />
         <Route path="/agendamento" component={Schedule} />
         <Route path="/" component={Main} />

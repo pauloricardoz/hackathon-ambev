@@ -18,6 +18,8 @@
 .imagem div{
     display: flex;
     width: 40%;
+    align-items: center;
+    justify-content: center;
 }
 
 .imagem img{

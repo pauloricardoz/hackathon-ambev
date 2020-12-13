@@ -3,7 +3,7 @@ import Produto from '../components/Produto';
 import TotalCart from '../components/totalCart';
 import myContext from '../Context';
 import '../CSS/pedido.css';
-
+/* import mockProdutos from '../components/db' */
 const mockProdutos = [
   {
     titulo: 'brahma-chopp',

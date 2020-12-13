@@ -19,8 +19,11 @@ function Pagamento() {
         <label htmlFor="neighborhood">Bairro:</label>
         <input name="neighborhood" defaultValue={city.neighborhood} />
 
-        <label htmlFor="number">Bairro:</label>
+        <label htmlFor="number">Numero:</label>
         <input type="number" name="number" />
+
+        <label htmlFor="complement">Complemento:</label>
+        <input name="complement" />
 
         <label htmlFor="city">Cidade:</label>
         <input name="city" defaultValue={city.city} />

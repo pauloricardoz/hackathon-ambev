@@ -14,7 +14,7 @@ const Schedule = (props) => {
     <div className="calendar" data-cy="calendly">
       {!city ? <GetCEP /> : <DetalhesData />}
       <MyCalendar />
-<<<<<<< HEAD
+
       <button
         onClick={() => {
           const [year, month, day] = [date.getFullYear(), date.getMonth(), date.getDate()];
@@ -27,9 +27,6 @@ const Schedule = (props) => {
       >
         Adicionar pedido
       </button>
-=======
-      <button data-cy="btn" onClick={() => props.history.push('/pedido')}>Adicionar pedido</button>
->>>>>>> 4ddb80724ebb999b47d49b9eef9b978f2c809c56
     </div>
   );
 };

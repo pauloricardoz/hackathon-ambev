@@ -12,13 +12,13 @@ const Schedule = (props) => {
 
   console.log(/\d{5}-\d{3}/.test(CEP));
   return (
-    <div className="calendar">
+    <div className="calendar" data-cy="calendly">
       {!city ? <GetCEP /> : <DetalhesData />}
       <br />
       <br />
       <br />
       <MyCalendar />
-      <button onClick={() => props.history.push('/pedido')}>Adicionar pedido</button>
+      <button data-cy="btn" onClick={() => props.history.push('/pedido')}>Adicionar pedido</button>
     </div>
   );
 };

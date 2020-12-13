@@ -1,5 +1,21 @@
-.App {
-  text-align: center;
+header, footer {
+  background-color: black;
+  color: white;
+}
+
+header ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+header a:hover {
+  color: chartreuse;
+}
+
+header a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 .App-logo {

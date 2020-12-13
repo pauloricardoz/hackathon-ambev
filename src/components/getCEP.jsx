@@ -1,0 +1,42 @@
+import React, { useContext, useState } from 'react';
+import cep from 'cep-promise';
+import myContext from '../Context';
+import '../CSS/calendar.css';
+
+const GetCEP = () => {
+  const { CEP, setCEP, city, setCity } = useContext(myContext);
+  const [message, setMessage] = useState(null);
+
+  console.log(/\d{5}-\d{3}/.test(CEP));
+  return (
+    <div>
+      <input
+        type="text"
+        class="form-control cep-mask"
+        placeholder="Ex.: 00000-000"
+        onChange={(e) => {
+          setCEP(e.target.value);
+        }}
+      />
+      <button
+        disabled={!/^\d{5}[-]?\d{3}$/.test(CEP)}
+        onClick={() =>
+          cep(CEP)
+            .then((e) => {
+              console.log(e);
+              setCity(e);
+            })
+            .catch((e) => {
+              console.log(e);
+              setMessage(`${e.message} Tente novamente um CEP valido`);
+            })
+        }
+      >
+        Buscar
+      </button>
+      <p>{message}</p>
+    </div>
+  );
+};
+
+export default GetCEP;

@@ -33,6 +33,11 @@
     padding: 5%;
 }
 
+.main-title {
+    text-align: center;
+    margin: 5%;
+    color: white;
+}
 .linkbtn {
     text-decoration: none;
 }

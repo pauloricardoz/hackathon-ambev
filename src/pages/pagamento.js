@@ -19,7 +19,7 @@ function Pagamento() {
         <label htmlFor="last">Último nome:</label>
         <input name="last" onChange={handlePersona} required />
 
-        <label htmlFor="street">Lougradouro:</label>
+        <label htmlFor="street">Logradouro:</label>
         <input
           name="street"
           defaultValue={!city ? '' : city.street}

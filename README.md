@@ -1,16 +1,16 @@
 # Time 19 - Prost
+Projeto criado para ajudar os produtores de eventos a conquistarem melhores condições de preço e logística
 
-Projeto criado para ajudar os empresários do segmento de eventos a conquistarem melhires condições de preço, logística e relacionamento com a AMBEV
-
-## Available Scripts
-
+## Ferramentas
 Criado em Criado React (https://github.com/facebook/create-react-app).
 
 
 ### `Teste implantado com Cypress`
-
-.//node_modules/.bin/cypress
+./node_modules/.bin/cypress
 
 
 ### `Picth`
-www.youtube.com/
+https://youtu.be/JdIKXTc4zek
+
+### `Vídeo Demo`
+https://youtu.be/md5kOBL-C9Q

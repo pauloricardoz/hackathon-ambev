@@ -15,9 +15,9 @@ const Schedule = (props) => {
       {!city ? <GetCEP /> : <DetalhesData />}
       {city ? (
         <div>
-          <h2 className="alterar-cep">
+          <h3 className="alterar-cep">
             Alterar CEP?
-          </h2>
+          </h3>
           <button className="button alterar-cep" onClick={() => setCity(null)}>Sim</button>
         </div>
       ) : null}

@@ -27,18 +27,18 @@ function Pagamento() {
           required
         />
 
+        <label htmlFor="number">Número:</label>
+        <input type="number" name="number" onChange={handlePersona} required />
+
+        <label htmlFor="complement">Complemento:</label>
+        <input name="complement" onChange={handlePersona} />
+
         <label htmlFor="neighborhood">Bairro:</label>
         <input
           name="neighborhood"
           defaultValue={!city ? '' : city.neighborhood}
           onChange={handlePersona}
         />
-
-        <label htmlFor="number">Numero:</label>
-        <input type="number" name="number" onChange={handlePersona} required />
-
-        <label htmlFor="complement">Complemento:</label>
-        <input name="complement" onChange={handlePersona} />
 
         <label htmlFor="city">Cidade:</label>
         <input
@@ -56,19 +56,21 @@ function Pagamento() {
           required
         />
       </form>
-      <form className="flex-me">
-        <label>Forma de pagamento:</label>
-        <select onClick={(e) => setMetod(e.target.value)}>
-          <option value="" disabled>
-            Selecione um opcao
+      <div className="orange">
+        <form className="flex-me">
+          <label>Forma de pagamento:</label>
+          <select onClick={(e) => setMetod(e.target.value)}>
+            <option value="" disabled>
+              Selecione um opcao
           </option>
-          <option value="credit">Cartão de crédito</option>
-          <option value="boleto">Boleto</option>
-          <option value="transfer">Transferência</option>
-          <option value="pix">Pix</option>
-        </select>
-        <FormaPagamento forma={metod} />
-      </form>
+            <option value="credit">Cartão de crédito</option>
+            <option value="boleto">Boleto</option>
+            <option value="transfer">Transferência</option>
+            <option value="pix">Pix</option>
+          </select>
+          <FormaPagamento forma={metod} />
+        </form>
+      </div>
     </div>
   );
 }

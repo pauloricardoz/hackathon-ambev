@@ -1,3 +1,4 @@
+
 # Time 19 - Prost!
 
 Projeto criado para ajudar produtores de eventos a conquistar melhores condições de preço, logística e relacionamento com a AMBEV
@@ -43,8 +44,8 @@ Criado em Criado React (https://github.com/facebook/create-react-app).
 
 
 ### `Teste implantado com Cypress`
+./node_modules/.bin/cypress
 
-.//node_modules/.bin/cypress
 
 
 ### `Pitch`
@@ -77,3 +78,4 @@ target="_blank" rel="noopener noreferrer" >  Luiz Araujo</a>
 target="_blank" rel="noopener noreferrer">Paulo Ricardo Zambelli</a>        
 <a href="https://www.linkedin.com/in/rafaelassad/" target="_blank"
 rel="noopener noreferrer" >Rafael Assad</a>
+

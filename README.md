@@ -2,7 +2,8 @@
 Projeto criado para ajudar os produtores de eventos a conquistarem melhores condições de preço e logística
 
 ## Ferramentas
-Criado em Criado React (https://github.com/facebook/create-react-app).
+Criado em Criado React (https://github.com/facebook/create-react-app)
+Responsivo
 
 
 ### `Teste implantado com Cypress`

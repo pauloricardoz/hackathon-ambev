@@ -7,7 +7,7 @@ Projeto criado para ajudar produtores de eventos a conquistar melhores condiçõ
 
 1. Clone o repositório
 2. Entre na pasta do repositorio
- * `cd  hackathon`
+ * `cd  hackathon-ambev`
 3. Instale as dependências e inicialize o projeto
   * Instale as dependências:
     * `npm install`
@@ -40,7 +40,7 @@ E por fim, uma página de confirmação de pedido será apresentada com o númer
 
 ## Available Scripts
 
-Criado em Criado React (https://github.com/facebook/create-react-app).
+Criado em React (https://github.com/facebook/create-react-app).
 
 
 ### `Teste implantado com Cypress`

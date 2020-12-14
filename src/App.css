@@ -38,11 +38,6 @@ footer a:link, a:visited {
   width: 25%;
 }
 
-/* .mambers {
-  display: flex;
-  justify-content: space-around;
-} */
-
 header ul li {
   list-style-type: none;
   display: inline-block;
@@ -64,8 +59,20 @@ a:active {
   text-decoration: none;
   color: inherit;
 }
+
+.finalizar {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: #F88622;
+  padding: 2%;
+  text-align: center;
+}
+
 @media screen and ( min-width : 300px ) and ( max-width : 569px ) { 
   .footer {
       flex-wrap: wrap;
+      align-content: flex-end;
   }
 }
+

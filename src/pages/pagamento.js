@@ -3,7 +3,7 @@ import FormaPagamento from '../components/formasPagamento';
 import myContext from '../Context';
 import '../CSS/pagamento.css';
 
-function Pagamento() {
+function Pagamento(props) {
   const { date, CEP, city, cart } = useContext(myContext);
   const [metod, setMetod] = useState(null);
   const [persona, setPersona] = useState({});
@@ -19,7 +19,10 @@ function Pagamento() {
         <label htmlFor="last">Último nome:</label>
         <input name="last" onChange={handlePersona} required />
 
-        <label htmlFor="street">Lougradouro:</label>
+        <label htmlFor="email">Email:</label>
+        <input name="email" onChange={handlePersona} required />
+
+        <label htmlFor="street">Logradouro:</label>
         <input
           name="street"
           defaultValue={!city ? '' : city.street}
@@ -62,13 +65,23 @@ function Pagamento() {
           <select onClick={(e) => setMetod(e.target.value)}>
             <option value="" disabled>
               Selecione um opcao
-          </option>
+            </option>
             <option value="credit">Cartão de crédito</option>
             <option value="boleto">Boleto</option>
             <option value="transfer">Transferência</option>
             <option value="pix">Pix</option>
           </select>
           <FormaPagamento forma={metod} />
+          <button
+            type="submit"
+            className="button"
+            onClick={(e) => {
+              e.preventDefault();
+              props.history.push('/finalizar');
+            }}
+          >
+            Finalizar
+          </button>
         </form>
       </div>
     </div>

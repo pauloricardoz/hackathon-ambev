@@ -40,7 +40,7 @@ const DetalhesData = () => {
       service: 'viacep',
       state: 'MG',
       street: '',
-      cart: { 3: { price: 2000, qty: 1 } },
+      cart: { 3: { price: 2000, qty: 2 } },
     },
     {
       cep: '36202338',
@@ -49,7 +49,7 @@ const DetalhesData = () => {
       service: 'viacep',
       state: 'MG',
       street: 'Rua Afrânio de Castro Costa',
-      cart: { 4: { price: 2000, qty: 1 } },
+      cart: { 4: { price: 2000, qty: 14 } },
     },
     {
       cep: '36031470',
@@ -58,7 +58,7 @@ const DetalhesData = () => {
       service: 'viacep',
       state: 'MG',
       street: 'Rua Afonso Gomes',
-      cart: { 5: { price: 2000, qty: 1 } },
+      cart: { 5: { price: 2000, qty: 16 } },
     },
     {
       cep: '30315500',
@@ -67,19 +67,32 @@ const DetalhesData = () => {
       service: 'viacep',
       state: 'MG',
       street: 'Rua Califórnia',
-      cart: { 6: { price: 2000, qty: 1 } },
+      cart: { 6: { price: 2000, qty: 10 } },
     },
   ]);
+  const pedidos = cidadePedidos
+    .filter((e) => e.city === city.city)
+    .map((e) => Object.values(e.cart).map((sec) => sec.qty));
 
   return (
     <div className="cidade">
-      <h2>Cidade: </h2>
-
-      {city ? (
-        cidadePedidos.filter((e) => e.city === city.city).map((e) => <h2>{e.city}</h2>)
-      ) : (
-        <p>Sem pedidos para essa cidade ainda</p>
-      )}
+      <div>
+        <h2>Pedidos nessa data: </h2>
+        {city ? (
+          cidadePedidos
+            .filter((e) => e.city === city.city)
+            .map((e, index) => {
+              console.log(Object.entries(e.cart));
+              return (
+                <p>
+                  Cidade: {e.city} - Quantidade {Object.entries(e.cart)[0][1].qty}
+                </p>
+              );
+            })
+        ) : (
+          <p>Sem pedidos para essa cidade ainda</p>
+        )}
+      </div>
     </div>
   );
 };

@@ -15,13 +15,13 @@ const Schedule = (props) => {
       {!city ? <GetCEP /> : <DetalhesData />}
       {city ? (
         <div>
-          <h3 className="alterar-cep">
-            Alterar CEP?
-          </h3>
-          <button className="button alterar-cep" onClick={() => setCity(null)}>Sim</button>
+          <span className="alterar-cep">Alterar CEP?</span>
+          <button className="button alterar-cep" onClick={() => setCity(null)}>
+            Sim
+          </button>
         </div>
       ) : null}
-      <MyCalendar />
+      {!city ? null : <MyCalendar />}
 
       <button
         className="button"
@@ -33,6 +33,7 @@ const Schedule = (props) => {
       >
         Adicionar pedido
       </button>
+      <h1> </h1>
     </div>
   );
 };

@@ -9,10 +9,9 @@ function Produto(props) {
   return (
     <div className="produto">
       <img src={image} className="image" />
-
-      <p>{titulo} - Caixa 12 unid</p>
-      <p>R$ {preco}</p>
-
+      <p>{titulo}</p>
+      <p> 12 unid </p>
+      <p>R$ {(preco * 12).toFixed(2)}</p>
       <button
         onClick={() => {
           if (cart[id]) {
@@ -26,8 +25,8 @@ function Produto(props) {
         }}
       >
         -
-      </button>
-      {' '} {cart[id] ? cart[id].qty : 0} {' '}
+      </button>{' '}
+      {cart[id] ? cart[id].qty : 0}{' '}
       <button
         onClick={() => {
           if (cart[id]) {

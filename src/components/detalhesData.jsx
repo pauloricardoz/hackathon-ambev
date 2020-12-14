@@ -77,7 +77,7 @@ const DetalhesData = () => {
   return (
     <div className="cidade">
       <div>
-        <h2>Pedidos para essa cidade: </h2>
+        <h2>Pedidos nessa data: </h2>
         {city ? (
           cidadePedidos
             .filter((e) => e.city === city.city)
@@ -85,7 +85,7 @@ const DetalhesData = () => {
               console.log(Object.entries(e.cart));
               return (
                 <p>
-                  {e.city} - Quantidade {Object.entries(e.cart)[0][1].qty}
+                  Cidade: {e.city} - Quantidade {Object.entries(e.cart)[0][1].qty}
                 </p>
               );
             })

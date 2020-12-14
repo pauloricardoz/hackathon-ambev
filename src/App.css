@@ -64,9 +64,20 @@ a:active {
   text-decoration: none;
   color: inherit;
 }
+
+.finalizar {
+  display: flex;
+  flex-direction: column;
+  color: dimgray;
+  background-color: #F88622;
+  padding: 2%;
+  text-align: center;
+}
+
 @media screen and ( min-width : 300px ) and ( max-width : 569px ) { 
   .footer {
       flex-wrap: wrap;
       align-content: flex-end;
   }
 }
+

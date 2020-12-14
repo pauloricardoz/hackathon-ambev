@@ -33,6 +33,7 @@ const Schedule = (props) => {
       >
         Adicionar pedido
       </button>
+      <h1> </h1>
     </div>
   );
 };

@@ -67,5 +67,6 @@ a:active {
 @media screen and ( min-width : 300px ) and ( max-width : 569px ) { 
   .footer {
       flex-wrap: wrap;
+      align-content: flex-end;
   }
 }

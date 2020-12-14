@@ -67,7 +67,7 @@ const mockProdutos = [
   },
   {
     titulo: 'Skol',
-    preco: 6.20,
+    preco: 6.2,
     image: '../midia/skol.png',
     id: 11,
   },

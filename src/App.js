@@ -1,4 +1,4 @@
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Main from './pages/main';
 import Schedule from './pages/schedule';
 import './App.css';
@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Pagamento from './pages/pagamento';
 import Finalizar from './pages/Finalizar';
-
 
 function App() {
   return (

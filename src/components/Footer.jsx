@@ -5,7 +5,7 @@ class Footer extends React.Component {
     return (
       <footer className="footer">
         <p>©Copyright 2020</p>
-        <p className='members'>
+        <p className="members">
           Project developed by{' '}
           <a href="https://www.linkedin.com/in/cduessel/" target="_blank" rel="noopener noreferrer">
             {' '}
@@ -34,8 +34,7 @@ class Footer extends React.Component {
           >
             {' '}
             Paulo Ricardo Zambelli
-          </a>
-          {' '}
+          </a>{' '}
           &
           <a
             href="https://www.linkedin.com/in/rafaelassad/"

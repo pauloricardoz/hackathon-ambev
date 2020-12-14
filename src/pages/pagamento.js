@@ -65,16 +65,23 @@ function Pagamento(props) {
           <select onClick={(e) => setMetod(e.target.value)}>
             <option value="" disabled>
               Selecione um opcao
-          </option>
+            </option>
             <option value="credit">Cartão de crédito</option>
             <option value="boleto">Boleto</option>
             <option value="transfer">Transferência</option>
             <option value="pix">Pix</option>
           </select>
           <FormaPagamento forma={metod} />
-          <button type="submit" className="button" onClick={(e) => {e.preventDefault()
-            props.history.push('/finalizar')
-          }}>Finalizar</button>
+          <button
+            type="submit"
+            className="button"
+            onClick={(e) => {
+              e.preventDefault();
+              props.history.push('/finalizar');
+            }}
+          >
+            Finalizar
+          </button>
         </form>
       </div>
     </div>

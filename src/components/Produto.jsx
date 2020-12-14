@@ -9,8 +9,10 @@ function Produto(props) {
   return (
     <div className="produto">
       <img src={image} className="image" />
-      <p>{titulo}</p>
+
+      <p>{titulo} - Caixa 12 unid</p>
       <p>R$ {preco}</p>
+
       <button
         onClick={() => {
           if (cart[id]) {

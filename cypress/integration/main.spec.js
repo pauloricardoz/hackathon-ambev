@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
 describe('main', () => {
-  it('deve acessar home', () => {
+  it('deve clicar em começar', () => {
     cy.visit('http://localhost:3000/');
-    cy.get('[data-cy="main"]').click();
+    cy.get('[class="linkbtn"]').click();
   });
 });

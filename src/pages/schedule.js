@@ -25,6 +25,7 @@ const Schedule = (props) => {
 
       <button
         className="button"
+        data-cy="add"
         onClick={() => {
           const [year, month, day] = [date.getFullYear(), date.getMonth(), date.getDate()];
           console.log(date.getTime());

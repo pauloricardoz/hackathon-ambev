@@ -1,16 +1,20 @@
 /// <reference types="cypress" />
 
 describe('schedule', () => {
-  it('deve acessar calendário', () => {
+  /* it('Alterar CEP', () => {
     cy.visit('http://localhost:3000/agendamento');
-    cy.get('[data-cy="calendly"]').click({ force: true });
-  });
-  it('deve adicionar pedido', () => {
-    cy.visit('http://localhost:3000/agendamento');
-    cy.get('[data-cy="btn"]').click({ force: true });
-  });
+    cy.get('[class="button alterar-cep"]').click();
+  }); */
   it('deve digitar CEP', () => {
     cy.visit('http://localhost:3000/agendamento');
     cy.get('[class="form-control cep-mask"]').type('30315500');
+  });
+  it('deve clicar em buscar', () => {
+    cy.visit('http://localhost:3000/agendamento');
+    cy.get('[class="button"]').click({ force: true });
+  });
+  it('deve clicar em buscar', () => {
+    cy.visit('http://localhost:3000/agendamento');
+    cy.get('[ class="button"]').click({ force: true });
   });
 });
